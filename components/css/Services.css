@@ -1,0 +1,767 @@
+
+.cte-services-section {
+  width: 100%;
+  /* background:
+    radial-gradient(circle at 12% 18%, rgba(231, 89, 77, 0.07), transparent 30%),
+    linear-gradient(180deg, #f8f8f8 0%, #ffffff 100%); */
+  color: #003366;
+  padding: 76px 24px;
+  overflow: hidden;
+  position: relative;
+}
+
+.cte-services-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 51, 102, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 51, 102, 0.03) 1px, transparent 1px);
+  background-size: 52px 52px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.cte-services-container {
+  width: 100%;
+  max-width: 1320px;
+  padding: 0 15px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.cte-services-header {
+  max-width: 750px;
+  margin: 0 auto 34px;
+  text-align: center;
+}
+
+.cte-services-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 7px 13px;
+  border-radius: 50px;
+  background: rgba(231, 89, 77, 0.1);
+  border: 1px solid rgba(231, 89, 77, 0.2);
+  color: #e7594d;
+  font-size: 11px;
+  line-height: 1;
+  font-weight: 850;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.cte-services-title {
+  margin: 0;
+  color: #000;
+  font-size: 55px;
+  line-height: 65px;
+  letter-spacing: -0.06em;
+  font-weight: 700;
+}
+
+.cte-services-subtitle {
+  max-width: 620px;
+  margin: 14px auto 0;
+  color: rgba(0, 51, 102, 0.64);
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* 2026 compact 2x2 services grid */
+
+.cte-services-bento {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  align-items: stretch;
+}
+
+.cte-service-bento-card,
+.cte-service-card-featured,
+.cte-service-card-compact,
+.cte-service-card-wide {
+  grid-column: auto;
+  min-height: 335px;
+}
+
+.cte-service-bento-card {
+  position: relative;
+  border-radius: 28px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(248, 248, 248, 0.92));
+  border: 1px solid rgba(0, 51, 102, 0.09);
+  box-shadow: 0 22px 64px rgba(0, 51, 102, 0.075);
+  overflow: hidden;
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    border-color 0.28s ease;
+}
+
+.cte-service-bento-card::before {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  right: -70px;
+  bottom: -80px;
+  background: rgba(231, 89, 77, 0.1);
+  border-radius: 50%;
+  filter: blur(32px);
+  pointer-events: none;
+}
+
+.cte-service-bento-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(231, 89, 77, 0.24);
+  box-shadow: 0 34px 86px rgba(0, 51, 102, 0.13);
+}
+
+/* Number moved to top-right */
+.cte-service-card-bg-number {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  bottom: auto;
+  color: rgba(0, 51, 102, 0.05);
+  font-size: 96px;
+  line-height: 0.9;
+  letter-spacing: -0.09em;
+  font-weight: 950;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.cte-service-card-inner {
+  position: relative;
+  z-index: 2;
+  min-height: 335px;
+  height: 100%;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Make wide card behave same as all other cards */
+.cte-service-card-wide .cte-service-card-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.cte-service-card-wide .cte-service-card-top,
+.cte-service-card-wide .cte-service-main,
+.cte-service-card-wide .cte-service-signal-panel {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Fixed top area so all headings start aligned */
+.cte-service-card-top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  min-height: 88px;
+  margin-bottom: 22px;
+  position: relative;
+  z-index: 3;
+}
+
+.cte-service-tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 12px;
+  border-radius: 50px;
+  background: rgba(231, 89, 77, 0.1);
+  border: 1px solid rgba(231, 89, 77, 0.18);
+  color: #e7594d;
+  font-size: 10px;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.cte-service-platforms {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.cte-service-logo-chip {
+  width: 85px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 10px;
+  border-radius: 50px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 51, 102, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 51, 102, 0.055);
+}
+
+.cte-service-logo {
+  width: 100%;
+  height: 25px;
+  object-fit: contain;
+  display: block;
+  /* filter: grayscale(100%);
+  opacity: 0.78; */
+  transition: 0.25s ease;
+}
+
+.cte-service-logo-chip:hover .cte-service-logo {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* Fixed content area so black boxes align */
+.cte-service-main {
+  max-width: 100%;
+  margin-top: 0;
+  min-height: 128px;
+  position: relative;
+  z-index: 3;
+}
+
+.cte-service-bento-card h3,
+.cte-service-card-compact h3 {
+  margin: 0;
+  color: #000;
+  font-size: 25px;
+  line-height: 35px;
+  letter-spacing: -0.055em;
+  font-weight: 700;
+}
+
+.cte-service-audience {
+  margin: 8px 0 0;
+  color: #e7594d;
+  font-size: 13px;
+  line-height: 1.35;
+  font-style: italic;
+  font-weight: 750;
+}
+
+.cte-service-line {
+  max-width: 100%;
+  margin: 11px 0 0;
+  color: rgba(0, 51, 102, 0.66);
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* Outcome box always sits at the bottom */
+.cte-service-signal-panel {
+  margin-top: auto;
+  min-height: 62px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 14px 15px;
+  border-radius: 18px;
+  background:
+    linear-gradient(135deg, rgba(7, 21, 35, 0.96), rgba(7, 21, 35, 0.88));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  position: relative;
+  z-index: 3;
+}
+
+.cte-service-card-featured .cte-service-signal-panel,
+.cte-service-card-wide .cte-service-signal-panel {
+  max-width: 100%;
+  margin-top: auto;
+}
+
+.cte-service-arrow {
+  color: #e7594d;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 950;
+  margin-top: 1px;
+  flex-shrink: 0;
+  animation: cteServiceArrowPulse 1.8s ease-in-out infinite;
+}
+
+.cte-service-signal-panel p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 13px;
+  line-height: 1.45;
+  font-weight: 750;
+}
+
+.cte-services-action {
+  margin-top: 34px;
+  text-align: center;
+}
+
+.cte-services-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: 0 28px;
+  border: 0;
+  border-radius: 50px;
+  background: #e7594d;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 16px 34px rgba(231, 89, 77, 0.25);
+  transition: 0.25s ease;
+}
+
+.cte-services-button:hover {
+  background: #cf594f;
+  transform: translateY(-2px);
+  box-shadow: 0 20px 44px rgba(231, 89, 77, 0.32);
+}
+
+.cte-services-note {
+  max-width: 430px;
+  margin: 12px auto 0;
+  color: rgba(0, 51, 102, 0.58);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+@keyframes cteServiceArrowPulse {
+  0%,
+  100% {
+    transform: translateX(0);
+    opacity: 0.72;
+  }
+
+  50% {
+    transform: translateX(5px);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cte-services-bento {
+    grid-template-columns: 1fr;
+  }
+
+  .cte-service-bento-card,
+  .cte-service-card-featured,
+  .cte-service-card-compact,
+  .cte-service-card-wide {
+    min-height: auto;
+  }
+
+  .cte-service-card-inner {
+    min-height: auto;
+  }
+
+  .cte-service-card-top {
+    min-height: auto;
+  }
+
+  .cte-service-main {
+    min-height: auto;
+  }
+
+  .cte-service-signal-panel {
+    margin-top: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .cte-services-section {
+    padding: 72px 16px;
+  }
+
+  .cte-services-header {
+    margin-bottom: 34px;
+  }
+
+  .cte-services-title {
+    font-size: 38px;
+    line-height: 1.04;
+    letter-spacing: -0.045em;
+  }
+
+  .cte-services-subtitle {
+    font-size: 16px;
+  }
+
+  .cte-service-bento-card {
+    border-radius: 24px;
+  }
+
+  .cte-service-card-inner {
+    padding: 22px 20px;
+  }
+
+  .cte-service-card-bg-number {
+    top: 16px;
+    right: 18px;
+    font-size: 72px;
+  }
+
+  .cte-service-bento-card h3,
+  .cte-service-card-compact h3 {
+    font-size: 26px;
+    line-height: 1.08;
+  }
+
+  .cte-service-line {
+    font-size: 15px;
+  }
+
+  .cte-service-signal-panel {
+    padding: 16px;
+    border-radius: 18px;
+  }
+
+  .cte-services-button {
+    width: 100%;
+    min-height: 54px;
+    padding: 0 20px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 420px) {
+  .cte-services-title {
+    font-size: 34px;
+  }
+
+  .cte-services-eyebrow {
+    font-size: 12px;
+  }
+
+  .cte-service-platforms {
+    gap: 7px;
+  }
+
+  .cte-service-logo-chip {
+    width: 96px;
+    height: 38px;
+    padding: 7px 9px;
+  }
+
+  .cte-service-logo {
+    height: 22px;
+  }
+}
+
+
+
+
+
+
+
+
+/* .cte-services-section {
+    width: 100%;
+    background: #f8f8f8;
+    color: #003366;
+    padding: 96px 24px;
+    overflow: hidden;
+  }
+  
+  .cte-services-container {
+    width: 100%;
+    max-width: 1320px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+  
+  .cte-services-header {
+    max-width: 800px;
+    margin: 0 auto 48px;
+    text-align: center;
+  }
+  
+  .cte-services-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    padding: 8px 14px;
+    border-radius: 50px;
+    background: rgba(231, 89, 77, 0.1);
+    border: 1px solid rgba(231, 89, 77, 0.2);
+    color: #e7594d;
+    font-size: 13px;
+    line-height: 1;
+    font-weight: 850;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  
+  .cte-services-title {
+    margin: 0;
+    color: #000;
+    font-size: 55px;
+    line-height: 65px;
+    letter-spacing: -0.055em;
+    font-weight: 800;
+  }
+  
+  .cte-services-subtitle {
+    max-width: 620px;
+    margin: 20px auto 0;
+    color:#000;
+    font-size: 18px;
+    line-height: 1.55;
+    font-weight: 500;
+  }
+  
+  .cte-services-list {
+    width: 100%;
+    border-radius: 28px;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid rgba(0, 51, 102, 0.09);
+    box-shadow: 0 24px 70px rgba(0, 51, 102, 0.08);
+  }
+  
+  .cte-service-card {
+    display: grid;
+    grid-template-columns: 280px 1fr 340px;
+    gap: 28px;
+    align-items: center;
+    padding: 24px 26px;
+    background: #ffffff;
+    border-bottom: 1px solid rgba(0, 51, 102, 0.08);
+  }
+  
+  .cte-service-card:last-child {
+    border-bottom: 0;
+  }
+  
+  .cte-service-platforms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .cte-service-logo-chip {
+    width: 80px;
+    height: 35px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 10px;
+    border-radius: 50px;
+    background: #ffffff;
+    border: 1px solid rgba(0, 51, 102, 0.1);
+    box-shadow: 0 8px 22px rgba(0, 51, 102, 0.05);
+  }
+  
+  .cte-service-logo {
+    width: 100%;
+    height: 35px;
+    object-fit: contain;
+    display: block;
+    transition: 0.25s ease;
+  }
+  
+  .cte-service-logo-chip:hover .cte-service-logo {
+    filter: grayscale(0%);
+    opacity: 1;
+  }
+  
+  .cte-service-content h3 {
+    margin: 0;
+    color: #000;
+    font-size: 24px;
+    line-height: 1.12;
+    letter-spacing: -0.04em;
+    font-weight: 850;
+  }
+  
+  .cte-service-audience {
+    margin: 7px 0 0;
+    color: #e7594d;
+    font-size: 14px;
+    line-height: 1.35;
+    font-style: italic;
+    font-weight: 700;
+  }
+  
+  .cte-service-line {
+    margin: 10px 0 0;
+    color: #000;
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 500;
+  }
+  
+  .cte-service-outcome {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 18px 18px;
+    border-radius: 18px;
+    background: rgba(231, 89, 77, 0.08);
+    border: 1px solid rgba(231, 89, 77, 0.16);
+  }
+  
+  .cte-service-outcome span {
+    color: #e7594d;
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 900;
+    margin-top: 1px;
+  }
+  
+  .cte-service-outcome p {
+    margin: 0;
+    color: #000;
+    font-size: 14px;
+    line-height: 1.45;
+    font-weight: 700;
+  }
+  
+  .cte-services-action {
+    margin-top: 42px;
+    text-align: center;
+  }
+  
+  .cte-services-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 56px;
+    padding: 0 28px;
+    border: 0;
+    border-radius: 50px;
+    background: #e7594d;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 16px 34px rgba(231, 89, 77, 0.25);
+    transition: 0.25s ease;
+  }
+  
+  .cte-services-button:hover {
+    background: #cf594f;
+    transform: translateY(-2px);
+    box-shadow: 0 20px 44px rgba(231, 89, 77, 0.32);
+  }
+  
+  .cte-services-note {
+    max-width: 430px;
+    margin: 14px auto 0;
+    color: rgba(0, 51, 102, 0.58);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  @media (max-width: 1100px) {
+    .cte-service-card {
+      grid-template-columns: 230px 1fr 300px;
+      gap: 20px;
+    }
+  }
+  
+  @media (max-width: 950px) {
+    .cte-service-card {
+      grid-template-columns: 1fr;
+      gap: 18px;
+      padding: 24px;
+    }
+  
+    .cte-service-outcome {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .cte-services-section {
+      padding: 72px 16px;
+    }
+  
+    .cte-services-header {
+      margin-bottom: 36px;
+    }
+  
+    .cte-services-title {
+      font-size: 38px;
+      line-height: 1.04;
+      letter-spacing: -0.045em;
+    }
+  
+    .cte-services-subtitle {
+      font-size: 16px;
+    }
+  
+    .cte-services-list {
+      border-radius: 24px;
+    }
+  
+    .cte-service-card {
+      padding: 22px 20px;
+    }
+  
+    .cte-service-content h3 {
+      font-size: 23px;
+    }
+  
+    .cte-services-button {
+      width: 100%;
+      min-height: 54px;
+      padding: 0 20px;
+      font-size: 15px;
+    }
+
+    .cte-service-logo-chip {
+        width: 104px;
+        height: 40px;
+        padding: 7px 10px;
+      }
+    
+      .cte-service-logo {
+        height: 24px;
+      }
+  }
+  
+  @media (max-width: 420px) {
+    .cte-services-title {
+      font-size: 34px;
+    }
+  
+    .cte-services-eyebrow {
+      font-size: 12px;
+    }
+  
+    .cte-service-platforms span {
+      font-size: 11.5px;
+    }
+
+    .cte-service-logo-chip {
+        width: 104px;
+        height: 40px;
+        padding: 7px 10px;
+      }
+    
+      .cte-service-logo {
+        height: 24px;
+      }
+  } */

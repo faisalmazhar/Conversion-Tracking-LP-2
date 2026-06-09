@@ -1,0 +1,170 @@
+.cte-logo-brands {
+    width: 100%;
+    padding: 100px 0 0;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .cte-logo-brands-container {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .cte-logo-brands-label {
+    margin: 0 0 24px;
+    color: rgba(255, 255, 255, 0.48);
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    letter-spacing: 0.16em;
+    text-transform: capitalize;
+    text-align: left;
+  }
+
+  .cte-logo-brands-label span {
+    font-weight: 800;
+    color: #fff;
+  }
+  
+  .cte-logo-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .cte-logo-slider::before,
+  .cte-logo-slider::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 110px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+  }
+  
+  .cte-logo-slider::before {
+    left: 0;
+    background: linear-gradient(90deg, #000212 0%, rgba(7, 21, 35, 0) 100%);
+  }
+  
+  .cte-logo-slider::after {
+    right: 0;
+    background: linear-gradient(270deg, #000212 0%, rgba(7, 21, 35, 0) 100%);
+  }
+  
+  .cte-logo-slider-track {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    animation: cteLogoScroll 95s linear infinite;
+  }
+  
+  .cte-logo-slider:hover .cte-logo-slider-track {
+    animation-play-state: paused;
+  }
+  
+  .cte-logo-slider-item {
+    width: 170px;
+    min-width: 170px;
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+  }
+  
+  /* .cte-slider-logo {
+    width: 130px;
+    height: 56px;
+    object-fit: contain;
+    display: block;
+    opacity: 0.58;
+    filter: grayscale(100%) brightness(0) invert(1);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+  } */
+
+
+  .cte-slider-logo {
+    width: 130px;
+    height: 56px;
+    object-fit: contain;
+    display: block;
+    opacity: 0.65;
+    filter: grayscale(100%) contrast(1.05);
+    transition: opacity 0.25s ease, filter 0.25s ease, transform 0.25s ease;
+  }
+  
+  .cte-slider-logo:hover {
+    opacity: 1;
+    filter: grayscale(0%) contrast(1);
+    transform: translateY(-2px);
+  }
+
+  .cte-slider-logo {
+    width: 130px;
+    height: 56px;
+    object-fit: contain;
+    display: block;
+    opacity: 0.65;
+    filter: grayscale(100%) contrast(1.05);
+    transition: opacity 0.25s ease, filter 0.25s ease, transform 0.25s ease;
+  }
+  
+  .cte-slider-logo:hover {
+    opacity: 0.95;
+    transform: translateY(-2px);
+  }
+  
+  .cte-logo-fallback-text {
+    max-width: 900px;
+    margin: 0 auto;
+    color: #ffffff;
+    font-size: clamp(28px, 4vw, 48px);
+    line-height: 1.12;
+    letter-spacing: -0.05em;
+    font-weight: 800;
+    text-align: center;
+  }
+  
+  @keyframes cteLogoScroll {
+    from {
+      transform: translateX(0);
+    }
+  
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .cte-logo-brands {
+      padding: 0 16px 58px;
+    }
+  
+    .cte-logo-brands-label {
+      margin-bottom: 18px;
+      font-size: 11px;
+      line-height: 1.5;
+    }
+  
+    .cte-logo-slider::before,
+    .cte-logo-slider::after {
+      width: 56px;
+    }
+  
+    .cte-logo-slider-item {
+      width: 145px;
+      min-width: 145px;
+      height: 68px;
+      padding: 0 16px;
+    }
+  
+    .cte-slider-logo {
+      width: 115px;
+      height: 50px;
+    }
+  }

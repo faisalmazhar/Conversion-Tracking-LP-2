@@ -1,0 +1,215 @@
+.cte-mirror-section {
+    width: 100%;
+    background: #ffffff;
+    padding: 96px 24px;
+    color: #003366;
+  }
+  
+  .cte-mirror-container {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+  }
+  
+  .cte-mirror-header {
+    max-width: 650px;
+    margin: 0 auto 25px;
+    text-align: center;
+  }
+  
+  .cte-mirror-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    padding: 8px 14px;
+    border-radius: 50px;
+    background: rgba(231, 89, 77, 0.1);
+    border: 1px solid rgba(231, 89, 77, 0.2);
+    color: #e7594d;
+    font-size: 13px;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  
+  .cte-mirror-title {
+    margin: 0;
+    color: #000;
+    font-size: 45px;
+    line-height: 54px;
+    letter-spacing: -0.055em;
+    font-weight: 700;
+  }
+  
+  .cte-mirror-board {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 28px 80px rgba(0, 51, 102, 0.12);
+    border: 1px solid rgba(0, 51, 102, 0.08);
+  }
+  
+  .cte-mirror-label {
+    padding: 22px 26px;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  
+  .cte-mirror-label-left {
+    background: #000212;
+    color: #ff8f86;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .cte-mirror-label-right {
+    background: #f6f8fb;
+    color: #16a66d;
+    border-bottom: 1px solid rgba(0, 51, 102, 0.08);
+  }
+  
+  .cte-mirror-row {
+    display: contents;
+  }
+  
+  .cte-mirror-cell {
+    padding: 10px 26px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 500;
+  }
+  
+  .cte-mirror-cell-left {
+    background: #000212;
+    color: rgba(255, 255, 255, 0.86);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .cte-mirror-cell-right {
+    background: #f6f8fb;
+    color: #000;
+    border-bottom: 1px solid rgba(0, 51, 102, 0.08);
+  }
+  
+  .cte-mirror-row:last-child .cte-mirror-cell-left,
+  .cte-mirror-row:last-child .cte-mirror-cell-right {
+    border-bottom: 0;
+  }
+  
+  .cte-mirror-icon {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 900;
+  }
+  
+  .cte-mirror-x {
+    background: rgba(231, 89, 77, 0.16);
+    color: #ff8f86;
+  }
+  
+  .cte-mirror-check {
+    background: rgba(22, 185, 121, 0.14);
+    color: #16a66d;
+  }
+  
+  @media (max-width: 900px) {
+    .cte-mirror-section {
+      padding: 78px 18px;
+    }
+  
+    .cte-mirror-board {
+      grid-template-columns: 1fr;
+      border-radius: 24px;
+    }
+  
+    .cte-mirror-label-left,
+    .cte-mirror-label-right {
+      display: none;
+    }
+  
+    .cte-mirror-row {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  
+    .cte-mirror-row + .cte-mirror-row {
+      border-top: 10px solid #ffffff;
+    }
+  
+    .cte-mirror-cell {
+      min-height: auto;
+      padding: 20px;
+      font-size: 16px;
+    }
+  
+    .cte-mirror-cell-left::before {
+      content: "What's happening right now";
+      display: block;
+      width: 100%;
+      color: #ff8f86;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+  
+    .cte-mirror-cell-right::before {
+      content: "What happens after we fix it";
+      display: block;
+      width: 100%;
+      color: #16a66d;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+  
+    .cte-mirror-cell-left,
+    .cte-mirror-cell-right {
+      flex-wrap: wrap;
+    }
+  
+    .cte-mirror-icon {
+      margin-top: 2px;
+    }
+  
+    .cte-mirror-cell span:last-child {
+      flex: 1;
+    }
+  }
+  
+  @media (max-width: 520px) {
+    .cte-mirror-section {
+      padding: 66px 16px;
+    }
+  
+    .cte-mirror-header {
+      margin-bottom: 34px;
+    }
+  
+    .cte-mirror-title {
+      font-size: 36px;
+    }
+  
+    .cte-mirror-cell {
+      font-size: 15px;
+      line-height: 1.45;
+    }
+  }

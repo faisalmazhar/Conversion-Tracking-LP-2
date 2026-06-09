@@ -1,0 +1,172 @@
+.cte-popup-open {
+    overflow: hidden;
+  }
+  
+  .cte-popup-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+  }
+  
+  .cte-popup-overlay.cte-popup-active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+  .cte-popup-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(3, 10, 18, 0.76);
+    backdrop-filter: blur(12px);
+  }
+  
+  .cte-popup-modal {
+    width: 100%;
+    max-width: 620px;
+    max-height: calc(100vh - 48px);
+    overflow-y: auto;
+    position: relative;
+    z-index: 2;
+    border-radius: 28px;
+    background: #ffffff;
+    box-shadow: 0 34px 110px rgba(0, 0, 0, 0.38);
+    padding: 34px;
+    transform: translateY(18px) scale(0.96);
+    transition: transform 0.25s ease;
+  }
+  
+  .cte-popup-active .cte-popup-modal {
+    transform: translateY(0) scale(1);
+  }
+  
+  .cte-popup-modal::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    height: 8px;
+    background: linear-gradient(90deg, #e7594d, #003366);
+    border-radius: 28px 28px 0 0;
+  }
+  
+  .cte-popup-close {
+    width: 38px;
+    height: 38px;
+    border: 0;
+    border-radius: 50%;
+    background: #f3f5f8;
+    color: #003366;
+    position: absolute;
+    right: 18px;
+    top: 18px;
+    cursor: pointer;
+    font-size: 26px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.25s ease;
+  }
+  
+  .cte-popup-close:hover {
+    background: #e7594d;
+    color: #ffffff;
+  }
+  
+  .cte-popup-header {
+    padding-right: 42px;
+    margin-bottom: 24px;
+  }
+  
+  .cte-popup-eyebrow {
+    display: inline-flex;
+    width: fit-content;
+    padding: 8px 13px;
+    border-radius: 50px;
+    background: rgba(231, 89, 77, 0.1);
+    border: 1px solid rgba(231, 89, 77, 0.2);
+    color: #e7594d;
+    font-size: 12px;
+    font-weight: 850;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  
+  .cte-popup-header h2 {
+    margin: 0;
+    color: #000;
+    font-size: 34px;
+    line-height: 1.05;
+    letter-spacing: -0.05em;
+    font-weight: 800;
+  }
+  
+  .cte-popup-header p {
+    margin: 14px 0 0;
+    color: #000;
+    font-size: 16px;
+    line-height: 1.55;
+  }
+  
+  .hubspot-form-box {
+    width: 100%;
+    min-height: 320px;
+    border-radius: 22px;
+    background: #f6f8fb;
+    border: 1px solid rgba(0, 51, 102, 0.08);
+  }
+  
+  .hubspot-form-box .hs-form-frame {
+    width: 100%;
+  }
+  
+  /* Make CTA buttons work when changed from Link to button */
+  .header-cta,
+  .cte-hero-button,
+  .cte-cost-button {
+    border: 0;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  
+  @media (max-width: 767px) {
+    .cte-popup-overlay {
+      padding: 14px;
+      align-items: flex-end;
+    }
+  
+    .cte-popup-modal {
+      max-height: calc(100vh - 28px);
+      border-radius: 24px;
+      padding: 28px 20px 22px;
+    }
+  
+    .cte-popup-modal::before {
+      border-radius: 24px 24px 0 0;
+    }
+  
+    .cte-popup-header {
+      padding-right: 34px;
+    }
+  
+    .cte-popup-header h2 {
+      font-size: 28px;
+    }
+  
+    .cte-popup-header p {
+      font-size: 15px;
+    }
+  
+    .hubspot-form-box {
+      border-radius: 18px;
+    }
+  }
